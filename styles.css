@@ -151,6 +151,29 @@ body {
   text-align: center;
 }
 
+#card-wrapper .qrcode {
+  position: absolute;
+  top: 505px;
+  left: 58px;
+  width: 320px;
+  text-align: center;
+}
+
+#card-wrapper .qrcode img {
+  margin-bottom: 16px;
+  width: 100%;
+  height: auto;
+  border: 20px solid white;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+#card-wrapper .qrcode .render-date {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.2em;
+}
+
 #card-sizer {
   width: 100%;
   height: 100%;
