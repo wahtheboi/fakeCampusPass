@@ -1,3 +1,63 @@
+@font-face {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts/muli-v12-latin-ext_latin-300.eot);
+  src: local("Muli Light"), local("Muli-Light"),
+    url(/fonts/muli-v12-latin-ext_latin-300.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/muli-v12-latin-ext_latin-600.eot);
+  src: local("Muli SemiBold"), local("Muli-SemiBold"),
+    url(/fonts/muli-v12-latin-ext_latin-600.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/muli-v12-latin-ext_latin-regular.eot);
+  src: local("Muli Regular"), local("Muli-Regular"),
+    url(/fonts/muli-v12-latin-ext_latin-regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/muli-v12-latin-ext_latin-700.eot);
+  src: local("Muli Bold"), local("Muli-Bold"),
+    url(/fonts/muli-v12-latin-ext_latin-700.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(/fonts/muli-v12-latin-ext_latin-800.eot);
+  src: local("Muli ExtraBold"), local("Muli-ExtraBold"),
+    url(/fonts/muli-v12-latin-ext_latin-800.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/fonts/muli-v12-latin-ext_latin-900.eot);
+  src: local("Muli Black"), local("Muli-Black"),
+    url(/fonts/muli-v12-latin-ext_latin-900.woff2) format("woff2");
+}
+
 body {
   font-family: "Muli", "Microsoft JhengHei", sans-serif;
   font-weight: 500;
