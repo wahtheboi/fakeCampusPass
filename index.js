@@ -12,3 +12,15 @@ const cardWidth = card.width;
       cardElement.style.transform = `scale( ${newWidth / cardWidth} )`;
     });
   });
+
+let currentFrame = 0;
+setInterval(() => {
+  cardElement.querySelector(
+    `.valid-until span[data-frame="${1 - (currentFrame % 2)}"]`
+  ).style.opacity = 0;
+  cardElement.querySelector(
+    `.valid-until span[data-frame="${currentFrame % 2}"]`
+  ).style.opacity = 1;
+
+  currentFrame++;
+}, 1000);
