@@ -13,6 +13,21 @@ const cardWidth = card.width;
     });
   });
 
+const renderDate = document.getElementById("render-date");
+const dateOptions = {
+  hour12: false,
+  month: "short",
+  day: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+};
+const currentDate = new Date();
+const currentDateString = currentDate
+  .toLocaleDateString("en-US", dateOptions)
+  .replace(",", "")
+  .replace(":", "");
+renderDate.innerHTML = currentDateString;
+
 let currentFrame = 0;
 setInterval(() => {
   cardElement.querySelector(
