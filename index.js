@@ -1,4 +1,25 @@
 const cardElement = document.getElementById("card-wrapper");
+const accessPass = cardElement.querySelector(".campus-access-pass");
+
+const accessPassDateOptions = {
+  year: "numeric",
+  month: "short",
+  day: "numeric",
+};
+
+function updateAccessPassDate(inputDate) {
+  accessPass.querySelector(".valid-until span[data-frame='0'").innerHTML =
+    inputDate.toLocaleDateString("en-ZA", accessPassDateOptions);
+  accessPass.querySelector(".valid-until span[data-frame='1'").innerHTML =
+    inputDate
+      .toLocaleDateString("zh-HK", accessPassDateOptions)
+      .replace("年", " 年 ")
+      .replace("月", " 月 ")
+      .replace("日", " 日 ");
+}
+
+updateAccessPassDate(new Date());
+
 const card = cardElement.getBoundingClientRect();
 const cardWidth = card.width;
 
@@ -39,3 +60,13 @@ setInterval(() => {
 
   currentFrame++;
 }, 1000);
+
+accessPass.addEventListener("click", () => {
+  const today = new Date();
+  const inputDateString = prompt(
+    "Please enter date.",
+    today.toLocaleDateString("en-ZA")
+  );
+  const inputDate = new Date(inputDateString);
+  updateAccessPassDate(inputDate);
+});
