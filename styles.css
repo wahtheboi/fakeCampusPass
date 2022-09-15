@@ -1,182 +1,247 @@
-/**
-Palette: https://scrimba.com/links/hometown-palette
-RED: #E63946
-LIGHT: #F1FAEE
-AQUA: #A8DADC
-LIGHT BLUE: #457B9D
-DARK BLUE: #1D3557
+@font-face {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts/muli-v12-latin-ext_latin-300.eot);
+  src: local("Muli Light"), local("Muli-Light"),
+    url(/fonts/muli-v12-latin-ext_latin-300.woff2) format("woff2");
+}
 
-*/
+@font-face {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/muli-v12-latin-ext_latin-600.eot);
+  src: local("Muli SemiBold"), local("Muli-SemiBold"),
+    url(/fonts/muli-v12-latin-ext_latin-600.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/muli-v12-latin-ext_latin-regular.eot);
+  src: local("Muli Regular"), local("Muli-Regular"),
+    url(/fonts/muli-v12-latin-ext_latin-regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/muli-v12-latin-ext_latin-700.eot);
+  src: local("Muli Bold"), local("Muli-Bold"),
+    url(/fonts/muli-v12-latin-ext_latin-700.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(/fonts/muli-v12-latin-ext_latin-800.eot);
+  src: local("Muli ExtraBold"), local("Muli-ExtraBold"),
+    url(/fonts/muli-v12-latin-ext_latin-800.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/fonts/muli-v12-latin-ext_latin-900.eot);
+  src: local("Muli Black"), local("Muli-Black"),
+    url(/fonts/muli-v12-latin-ext_latin-900.woff2) format("woff2");
+}
 
 body {
-    display: block;
-    margin: 5px auto;
-    text-align: center;
-    border-radius: 12px;
-    border: 0.5px solid #cbcacd;
-    width: 450px;
-    box-shadow: 1px 1px 6px lightgray;
+  font-family: "Muli", "Microsoft JhengHei", sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #30383b;
+  -webkit-font-smoothing: antialiased;
 }
 
-img {
-    width: 100px;
+.label {
+  display: inline;
+  padding: 0.2em 0.6em 0.3em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+  margin: 0;
 }
 
-#header {
-   color: #183865;
-   font-family: 'Muli','Microsoft JhengHei',sans-serif;
-   font-weight: 700;
-   font-size: 20px;
-   -webkit-text-size-adjust: 100%;
-   padding: 10px 0 5px;
-   
+.root {
+  box-sizing: border-box;
+  max-width: 1500px;
+  margin: 0px auto;
+  padding: 0 25px;
+
+  color: #333;
+  line-height: 1.43em;
+  letter-spacing: 0.58px;
 }
 
-#hero {
-    display: flex;
-    justify-content: space-around;
-    background-color: #cbcacd;
-    padding: 30px 15px 0px;
-    margin: 0px;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    
+.card-container {
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
-#role {
-    font-family: 'Muli','Microsoft JhengHei',sans-serif;
+#card-wrapper {
+  position: relative;
+  width: 1090px;
+  height: 1766px;
+  background: url("/images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+  overflow: hidden;
+
+  transform-origin: 0% 0%;
 }
 
-#chs-background {
-    max-width: 80px;
-    background-color: #3f2b97;
-    color: white;
-    margin: 0px;
-    font-weight: 100;
-    font-size:28px;
-    padding: 3px 32px;
-    
+#card-wrapper .photo {
+  position: absolute;
+  top: auto;
+  bottom: 784px;
+  left: 456px;
+  width: 560px;
+  height: 750px;
+  background: white;
+  display: block;
+  place-items: flex-start;
+  align-items: flex-end;
 }
 
-#eng-background {
-    max-width: 80px;
-    margin: 0px;
-    background-color: #7d2349;
-    color: white;
-    font-weight: 300;
-    font-size: 18px;
-    padding: 10px 32px;
+#card-wrapper .identity {
+  position: absolute;
+  top: 237px;
+  left: 58px;
+  font-size: 40px;
 }
 
-#qrcode {
-    margin-top: 30px;
-    background-image: url(./images/capQrcode.png);
-    width: 144px;
-    height: 144px;
-    background-size: cover;
+#card-wrapper .identity > * {
+  display: block;
+  line-height: 1.5em;
+  text-align: center;
+  color: white;
 }
 
-#emptySpace {
-    margin: 0;
-    width: 230px;
-    height: 320px;
-    background-color:  white;
+#card-wrapper .identity .type-chinese {
+  background-color: #3f2b97;
+  width: 320px;
+  font-size: 60px;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  line-height: 1em;
 }
 
-#name {
-    font-weight: 800;
-    margin-bottom: 0px
+#card-wrapper .identity .type-english {
+  background-color: #7c2348;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
-#month-el {
-    margin: 3px;
-    font-size: 27px;
-    font-weight: 800;
-    font-family: sans-serif;
+#card-wrapper .names {
+  position: absolute;
+  top: 1024px;
+  left: 456px;
+  font-weight: 900;
+  letter-spacing: 0;
+  font-size: 54px;
+  line-height: 1.2em;
+  width: 560px;
+  text-align: center;
 }
 
-#time-el {
-    margin: 4px;
-    font-size: 27px;
-    font-weight: 800;
-    font-family: sans-serif;
+#card-wrapper .qrcode {
+  position: absolute;
+  top: 505px;
+  left: 58px;
+  width: 320px;
+  text-align: center;
 }
 
-#capLogo {
-    display: block;
-    padding: 0px;
-    margin: 0;
-    width: 450px;
-    text-align: start;
+#card-wrapper .qrcode img {
+  margin-bottom: 16px;
+  width: 100%;
+  height: auto;
+  border: 20px solid white;
+  vertical-align: middle;
+  box-sizing: border-box;
 }
 
-#footer {
-    display: block;
-    margin: 0 auto 25px;
+#card-wrapper .qrcode .render-date {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.2em;
 }
 
-        
-#validUntil {
-    padding-top: 10px;
-    font-family: 'Muli','Microsoft JhengHei',sans-serif;
-    font-weight: 600;
-    font-size: 27px;
+#card-wrapper .campus-access-pass {
+  position: absolute;
+  top: 1476px;
+  left: 55px;
 }
 
-#changingDate {
-    display: block;
-    font-family: sans-serif;
-    font-size: 40px;
-    min-width: 400px;
-    margin: 2px 0;
-    font-weight: 800;
+#card-wrapper .campus-access-pass .valid-until {
+  text-align: center;
+  width: 980px;
 }
 
-#changingDate:before {
-            color: #01b18d;
-            content: "4 Sep 2022";
-            animation: animate infinite linear 2s;
-        }
-  
-        @keyframes animate {
-            35% {
-                content: "4 Sep 2022";
-                color: #01b18d;
-            }
-            
-            50% {
-                content: "2022 年 9 月 4 日";
-                color: white;
-            }
-            
-            85% {
-                content: "2022 年 9 月 4 日";
-                color: white;
-            }
-        }
-
-.box{
-    display: inline-block;
-    padding: 8px 0;
-    height: 50px;
-    width: 400px;
-    margin-bottom: 0;
-    background-color:white;
-    border: 1px solid #01b18d;
-    animation: animate1 infinite linear 2s;
+#card-wrapper .campus-access-pass .valid-until .label {
+  font-size: 60px;
+  color: #515151;
+  padding: 0;
+  line-height: 1.2em;
 }
 
-@keyframes animate1{
-            35% {
-                background-color: white;
-                border: 1px solid #01b18d;
-            }
-            
-            50% {
-               background-color: #01b18d;
-            }
-            
-            85% {
-                background-color: #01b18d;
-            }
+#card-wrapper .campus-access-pass .valid-until .value {
+  position: relative;
+  margin-top: 20px;
+  font-size: 94px;
+  font-weight: 900;
+  line-height: 1.2em;
+}
+
+#card-wrapper .valid-until span[data-frame] {
+  position: relative;
+  display: block;
+  padding: 20px;
+  line-height: 112px;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+  opacity: 0;
+  margin-top: -154px;
+}
+
+#card-wrapper .valid-until span[data-frame]:first-child {
+  opacity: 1;
+  margin-top: 0;
+  color: rgb(0, 176, 141);
+  border-color: rgb(0, 176, 141);
+  border: 1px solid #0074bc;
+}
+
+#card-wrapper .valid-until span[data-frame]:last-child {
+  background-color: rgb(0, 176, 141);
+  color: white;
+  border: 1px solid white;
+}
+
+#card-sizer {
+  width: 100%;
+  height: 100%;
 }
